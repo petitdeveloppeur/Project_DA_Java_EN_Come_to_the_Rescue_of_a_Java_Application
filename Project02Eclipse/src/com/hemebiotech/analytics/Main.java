@@ -5,7 +5,15 @@ import java.util.Map;
 
 public class Main {
 
+    /**
+     * Runs the full symptom analytics pipeline.
+     *
+     * @param args CLI arguments (unused)
+     */
     public static void main(String[] args) {
+
+     
+
         ISymptomReader reader = new ReadSymptomDataFromFile("symptoms.txt");
         ISymptomWriter writer = new WriteSymptomDataToFile("result.out");
         AnalyticsCounter analyticsCounter = new AnalyticsCounter(reader, writer);

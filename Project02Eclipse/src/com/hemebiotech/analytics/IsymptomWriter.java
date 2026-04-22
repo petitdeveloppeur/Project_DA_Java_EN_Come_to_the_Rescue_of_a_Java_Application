@@ -1,20 +1,16 @@
 package com.hemebiotech.analytics;
-
-/**
- * Anything that will write symptom data to a source
- * The important part is, the return value from the operation, which is a list of strings,
- * that may contain many duplications
- * 
- * The implementation does not need to order the list
- * 
- */     
+ 
 import java.util.Map;
 import java.io.IOException;
+
+/**
+ * Writes aggregated symptom data to a source.
+ */  
 public interface ISymptomWriter {
     /**
-     * Write the symptoms to a source
-     * 
-     * @param symptoms a map of symptoms and their counts
+     * Writes each symptom and its occurrence count.
+     *
+     * @param symptoms map of symptom names to occurrence counts
      */
     void writeSymptoms(Map<String, Integer> symptoms) throws IOException;
 
