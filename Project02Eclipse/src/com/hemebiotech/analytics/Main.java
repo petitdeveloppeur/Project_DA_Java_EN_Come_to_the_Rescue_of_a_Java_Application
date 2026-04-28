@@ -14,8 +14,8 @@ public class Main {
 
      
 
-        ISymptomReader reader = new ReadSymptomDataFromFile("symptoms.txt");
-        ISymptomWriter writer = new WriteSymptomDataToFile("result.out");
+        ISymptomReader reader = new ReadSymptomDataFromFile("../symptoms.txt"); 
+        ISymptomWriter writer = new WriteSymptomDataToFile("../result.out");
         AnalyticsCounter analyticsCounter = new AnalyticsCounter(reader, writer);
 
         List<String> symptoms = analyticsCounter.getSymptoms();
